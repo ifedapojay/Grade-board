@@ -12,7 +12,7 @@
 
                 <div style="text-align:center"> 
                         <h3 style="color:rgb(203, 236, 12)" > Grading board</h3>
-                        <input oninput="scor" type="text" name="value" id="score">
+                        <input oninput="scor" type="number" name="value" id="score">
                         <button onclick="mark()">Grade</button>
                         
                 
@@ -47,9 +47,9 @@
         }else if(score.value >= 40 && score.value < 45){
             document.getElementById('show').innerHTML= 'E'
             //console.log('E')
-        }else if(score > 100 || score < 0){
+        }else if(score.value > 100 || score.value < 0){
             document.getElementById('show').innerHTML= 'Invalid'
-            //console.log('Invalid')  
+            //console.log('E')
         }
         else{
             document.getElementById('show').innerHTML= 'F'
