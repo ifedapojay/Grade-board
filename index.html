@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>grade</title>
+</head>
+<body style="background-color:brown" >
+       
+        <div style="color:cornsilk">
+
+                <div style="text-align:center"> 
+                        <h3 style="color:rgb(203, 236, 12)" > Grading board</h3>
+                        <input oninput="scor" type="text" name="value" id="score">
+                        <button onclick="mark()">Grade</button>
+                        
+                
+                 </div> 
+                
+                <p style="text-align:center" id="show"></p>
+                
+                
+        </div>
+ 
+   
+    
+
+    <script>
+        
+        let score =document.getElementById('score');
+       
+        function  mark(){
+
+        if (score.value >= 70 && score.value <= 100){
+          document.getElementById('show').innerHTML= 'A'
+
+        }else if(score.value >= 60 && score.value < 70){
+            document.getElementById('show').innerHTML= 'B'
+
+        }else if(score.value >= 50 && score.value < 60){
+            document.getElementById('show').innerHTML= 'C'
+            //console.log('C')
+        }else if(score.value >= 45 && score.value < 50){
+            document.getElementById('show').innerHTML= 'D'
+            //console.log('D')
+        }else if(score.value >= 40 && score.value < 45){
+            document.getElementById('show').innerHTML= 'E'
+            //console.log('E')
+        }else if(score > 100 || score < 0){
+            document.getElementById('show').innerHTML= 'Invalid'
+            //console.log('Invalid')  
+        }
+        else{
+            document.getElementById('show').innerHTML= 'F'
+            //console.log('F')
+        }
+    }
+        </script>
+    
+</body>
+</html>
